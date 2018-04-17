@@ -1,0 +1,129 @@
+2017-04-09 21:31:33,128  INFO App:48 - Starting App on 0M4N203YXTY2XHI with PID 6360 (D:\JavaWorkspace\spring-boot-sample-redis\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-redis)
+ 2017-04-09 21:31:33,130  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-09 21:31:33,194  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:31:33 CST 2017]; root of context hierarchy
+ 2017-04-09 21:31:34,793  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-09 21:31:35,402  INFO RepositoryConfigurationDelegate:170 - Multiple Spring Data modules found, entering strict repository configuration mode!
+ 2017-04-09 21:31:36,629  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8080 (http)
+ 2017-04-09 21:31:36,823  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3633 ms
+ 2017-04-09 21:31:37,046  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-09 21:31:37,052  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-09 21:31:37,052  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-09 21:31:37,053  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-09 21:31:37,053  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-09 21:31:37,671  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:31:33 CST 2017]; root of context hierarchy
+ 2017-04-09 21:31:37,762  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-09 21:31:37,764  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-09 21:31:37,891  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:31:37,892  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:31:37,941  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:31:38,174  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ 2017-04-09 21:31:38,231  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-09 21:31:38,329  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8080 (http)
+ 2017-04-09 21:31:38,627  INFO App:57 - Started App in 6.196 seconds (JVM running for 7.903)
+ 2017-04-09 21:45:14,042  INFO App:48 - Starting App on 0M4N203YXTY2XHI with PID 4612 (D:\JavaWorkspace\spring-boot-sample-redis\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-redis)
+ 2017-04-09 21:45:14,045  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-09 21:45:14,130  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:45:14 CST 2017]; root of context hierarchy
+ 2017-04-09 21:45:14,512  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-09 21:45:15,878  INFO RepositoryConfigurationDelegate:170 - Multiple Spring Data modules found, entering strict repository configuration mode!
+ 2017-04-09 21:45:17,117  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8080 (http)
+ 2017-04-09 21:45:17,279  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3156 ms
+ 2017-04-09 21:45:17,564  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-09 21:45:17,577  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-09 21:45:17,581  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-09 21:45:17,581  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-09 21:45:17,582  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-09 21:45:18,397  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:45:14 CST 2017]; root of context hierarchy
+ 2017-04-09 21:45:18,492  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-09 21:45:18,494  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-09 21:45:18,555  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:45:18,556  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:45:18,615  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:45:18,816  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ 2017-04-09 21:45:18,878  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-09 21:45:18,952  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8080 (http)
+ 2017-04-09 21:45:19,110  INFO App:57 - Started App in 5.557 seconds (JVM running for 5.969)
+ 2017-04-09 21:47:30,434  INFO App:48 - Starting App on 0M4N203YXTY2XHI with PID 5304 (D:\JavaWorkspace\spring-boot-sample-redis\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-redis)
+ 2017-04-09 21:47:30,437  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-09 21:47:30,516  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:47:30 CST 2017]; root of context hierarchy
+ 2017-04-09 21:47:30,772  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-09 21:47:32,164  INFO RepositoryConfigurationDelegate:170 - Multiple Spring Data modules found, entering strict repository configuration mode!
+ 2017-04-09 21:47:33,265  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8080 (http)
+ 2017-04-09 21:47:33,421  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2909 ms
+ 2017-04-09 21:47:33,668  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-09 21:47:33,673  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-09 21:47:33,674  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-09 21:47:33,674  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-09 21:47:33,674  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-09 21:47:34,238  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 21:47:30 CST 2017]; root of context hierarchy
+ 2017-04-09 21:47:34,309  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-09 21:47:34,310  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-09 21:47:34,376  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:47:34,378  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:47:34,428  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 21:47:34,634  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ 2017-04-09 21:47:34,710  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-09 21:47:34,783  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8080 (http)
+ 2017-04-09 21:47:34,934  INFO App:57 - Started App in 4.928 seconds (JVM running for 5.332)
+ 2017-04-09 22:54:05,829  INFO App:48 - Starting App on 0M4N203YXTY2XHI with PID 6120 (D:\JavaWorkspace\spring-boot-sample-redis\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-redis)
+ 2017-04-09 22:54:05,833  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-09 22:54:05,935  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 22:54:05 CST 2017]; root of context hierarchy
+ 2017-04-09 22:54:06,309  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-09 22:54:07,393  INFO RepositoryConfigurationDelegate:170 - Multiple Spring Data modules found, entering strict repository configuration mode!
+ 2017-04-09 22:54:08,614  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8080 (http)
+ 2017-04-09 22:54:08,770  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2839 ms
+ 2017-04-09 22:54:08,989  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-09 22:54:08,995  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-09 22:54:08,996  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-09 22:54:08,996  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-09 22:54:08,997  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-09 22:54:09,752  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 22:54:05 CST 2017]; root of context hierarchy
+ 2017-04-09 22:54:09,874  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-09 22:54:09,876  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-09 22:54:09,978  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:54:09,979  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:54:10,034  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:54:10,256  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ 2017-04-09 22:54:10,334  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-09 22:54:10,417  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8080 (http)
+ 2017-04-09 22:54:10,649  INFO AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+ 2017-04-09 22:54:10,657 ERROR SpringApplication:839 - Application startup failed
+ java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.zte.chy.App.main(App.java:63)
+Caused by: java.lang.ArrayStoreException: java.util.HashMap
+	at java.util.AbstractCollection.toArray(Unknown Source)
+	at com.zte.chy.App.run(App.java:145)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 6 more
+2017-04-09 22:54:10,663  INFO AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 22:54:05 CST 2017]; root of context hierarchy
+ 2017-04-09 22:54:10,668  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+ 2017-04-09 22:55:27,180  INFO App:48 - Starting App on 0M4N203YXTY2XHI with PID 4392 (D:\JavaWorkspace\spring-boot-sample-redis\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-redis)
+ 2017-04-09 22:55:27,183  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-09 22:55:27,282  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 22:55:27 CST 2017]; root of context hierarchy
+ 2017-04-09 22:55:27,522  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-09 22:55:28,870  INFO RepositoryConfigurationDelegate:170 - Multiple Spring Data modules found, entering strict repository configuration mode!
+ 2017-04-09 22:55:29,985  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8080 (http)
+ 2017-04-09 22:55:30,144  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2870 ms
+ 2017-04-09 22:55:30,357  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-09 22:55:30,361  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-09 22:55:30,362  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-09 22:55:30,363  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-09 22:55:30,363  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-09 22:55:30,981  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2928854b: startup date [Sun Apr 09 22:55:27 CST 2017]; root of context hierarchy
+ 2017-04-09 22:55:31,075  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-09 22:55:31,077  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-09 22:55:31,147  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:55:31,149  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:55:31,210  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-09 22:55:31,413  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ 2017-04-09 22:55:31,492  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-09 22:55:31,575  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8080 (http)
+ 2017-04-09 22:55:31,738  INFO App:57 - Started App in 4.996 seconds (JVM running for 5.514)
+ 
