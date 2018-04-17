@@ -1,0 +1,306 @@
+2017-04-27 21:55:20,932  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zte.chy.common.SpringUtilsTest], using SpringBootContextLoader
+ 2017-04-27 21:55:20,949  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.zte.chy.common.SpringUtilsTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2017-04-27 21:55:21,071  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2017-04-27 21:55:21,107  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@72d1ad2e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d7275fc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@399f45b1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@38c6f217, org.springframework.test.context.transaction.TransactionalTestExecutionListener@478190fc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79e2c065, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a93b025, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35cabb2a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e07db1f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1189dd52, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@36bc55de, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@564fabc8]
+ 2017-04-27 21:55:22,343  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5553d0f5: startup date [Thu Apr 27 21:55:22 CST 2017]; root of context hierarchy
+ 2017-04-27 21:55:22,842  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e9532751] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-27 21:55:23,007  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-27 21:55:23,744  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-27 21:55:24,918  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-27 21:55:24,937  INFO SpringUtilsTest:661 - No active profile set, falling back to default profiles: default
+ 2017-04-27 21:55:24,947  INFO GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5da7cee2: startup date [Thu Apr 27 21:55:24 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5553d0f5
+ 2017-04-27 21:55:26,895  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-27 21:55:27,097  INFO GenericScope:263 - BeanFactory id=0e14929e-ab0e-363b-b76c-02a5312df792
+ 2017-04-27 21:55:27,444  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e9532751] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-27 21:55:27,876  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-27 21:55:28,112  INFO cluster:71 - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+ 2017-04-27 21:55:28,928  INFO cluster:76 - Exception in monitor thread while connecting to server localhost:27017
+ com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 more
+2017-04-27 21:55:58,118  WARN GenericWebApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialControl': Unsatisfied dependency expressed through field 'materialService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+ 2017-04-27 21:55:58,142  INFO AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+ 2017-04-27 21:55:58,157 ERROR SpringApplication:839 - Application startup failed
+ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialControl': Unsatisfied dependency expressed through field 'materialService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 56 more
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:162)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:133)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:125)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:109)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:51)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.data.mapping.context.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:336)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:180)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:140)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:67)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getEntityInformation(MongoRepositoryFactory.java:119)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getTargetRepository(MongoRepositoryFactory.java:93)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean.afterPropertiesSet(MongoRepositoryFactoryBean.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 66 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:219)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:111)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:66)
+	at com.mongodb.Mongo.execute(Mongo.java:781)
+	at com.mongodb.Mongo$2.execute(Mongo.java:764)
+	at com.mongodb.DBCollection.createIndex(DBCollection.java:1541)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:142)
+	... 86 more
+2017-04-27 21:55:58,174 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@72d1ad2e] to prepare test instance [com.zte.chy.common.SpringUtilsTest@6785c9fa]
+ java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialControl': Unsatisfied dependency expressed through field 'materialService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 56 more
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:162)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:133)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:125)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:109)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:51)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.data.mapping.context.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:336)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:180)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:140)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:67)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getEntityInformation(MongoRepositoryFactory.java:119)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getTargetRepository(MongoRepositoryFactory.java:93)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean.afterPropertiesSet(MongoRepositoryFactoryBean.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 66 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:219)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:111)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:66)
+	at com.mongodb.Mongo.execute(Mongo.java:781)
+	at com.mongodb.Mongo$2.execute(Mongo.java:764)
+	at com.mongodb.DBCollection.createIndex(DBCollection.java:1541)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:142)
+	... 86 more
+2017-04-27 22:00:29,430  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zte.chy.common.SpringUtilsTest], using SpringBootContextLoader
+ 2017-04-27 22:00:29,439  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.zte.chy.common.SpringUtilsTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2017-04-27 22:00:29,522  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2017-04-27 22:00:29,568  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@72d1ad2e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d7275fc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@399f45b1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@38c6f217, org.springframework.test.context.transaction.TransactionalTestExecutionListener@478190fc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79e2c065, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a93b025, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35cabb2a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e07db1f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1189dd52, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@36bc55de, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@564fabc8]
+ 2017-04-27 22:00:30,561  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5553d0f5: startup date [Thu Apr 27 22:00:30 CST 2017]; root of context hierarchy
+ 2017-04-27 22:00:30,806  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-27 22:00:31,060  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e3abd100] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-27 22:00:31,759  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-27 22:00:32,888  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-27 22:00:32,902  INFO SpringUtilsTest:661 - No active profile set, falling back to default profiles: default
+ 2017-04-27 22:00:32,909  INFO GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@14fc5d40: startup date [Thu Apr 27 22:00:32 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5553d0f5
+ 2017-04-27 22:00:34,551  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-27 22:00:34,698  INFO GenericScope:263 - BeanFactory id=0e14929e-ab0e-363b-b76c-02a5312df792
+ 2017-04-27 22:00:34,854  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e3abd100] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-27 22:00:35,272  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-27 22:00:35,488  INFO connection:71 - Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+ 2017-04-27 22:00:35,493  INFO cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2627363}
+ 2017-04-27 22:00:35,580  INFO connection:71 - Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+ 2017-04-27 22:00:36,758  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material/barcode],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialByBarcode(java.lang.String)
+ 2017-04-27 22:00:36,759  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.saveMaterial(com.zte.chy.model.Material) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-27 22:00:36,760  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialList(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.zte.chy.exception.InvalidRequestException,java.text.ParseException
+ 2017-04-27 22:00:36,762  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog/id],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogById(java.lang.String)
+ 2017-04-27 22:00:36,763  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogByBarcode(java.lang.String)
+ 2017-04-27 22:00:36,764  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.saveControlMessageLog(com.zte.chy.model.ControlMessageLog) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-27 22:00:36,766  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+ 2017-04-27 22:00:36,770  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+ 2017-04-27 22:00:36,772  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+ 2017-04-27 22:00:36,773  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+ 2017-04-27 22:00:36,780  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-27 22:00:36,781  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-27 22:00:37,444  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@14fc5d40: startup date [Thu Apr 27 22:00:32 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5553d0f5
+ 2017-04-27 22:00:37,715  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-27 22:00:37,716  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-27 22:00:37,798  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-27 22:00:38,597  INFO DocumentationPluginsBootstrapper:84 - Context refreshed
+ 2017-04-27 22:00:38,682  INFO DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
+ 2017-04-27 22:00:38,695  INFO ApiListingReferenceScanner:44 - Scanning for api listing references
+ 2017-04-27 22:00:38,916  INFO SpringUtilsTest:57 - Started SpringUtilsTest in 9.205 seconds (JVM running for 10.151)
+ 

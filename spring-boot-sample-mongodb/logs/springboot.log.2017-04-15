@@ -1,0 +1,336 @@
+2017-04-15 13:45:16,458  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d: startup date [Sat Apr 15 13:45:16 CST 2017]; root of context hierarchy
+ 2017-04-15 13:45:16,996  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 13:45:17,205  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-15 13:45:17,949  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-15 13:45:19,448  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-15 13:45:19,451  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-15 13:45:19,482  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64ba3208: startup date [Sat Apr 15 13:45:19 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 13:45:21,434  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-15 13:45:21,625  INFO GenericScope:263 - BeanFactory id=e0dc2065-dbe1-31f2-bbca-74503d564f13
+ 2017-04-15 13:45:21,681  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 13:45:22,218  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8089 (http)
+ 2017-04-15 13:45:22,559  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3077 ms
+ 2017-04-15 13:45:22,797  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-15 13:45:22,804  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-15 13:45:22,813  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-15 13:45:22,813  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-15 13:45:22,815  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-15 13:45:23,213  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-15 13:45:23,554  INFO cluster:71 - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+ 2017-04-15 13:45:24,307  INFO cluster:76 - Exception in monitor thread while connecting to server localhost:27017
+ com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 more
+2017-04-15 13:45:53,564  WARN AnnotationConfigEmbeddedWebApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialControl': Unsatisfied dependency expressed through field 'materialService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+ 2017-04-15 13:45:53,681  INFO AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+ 2017-04-15 13:45:53,690 ERROR SpringApplication:839 - Application startup failed
+ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialControl': Unsatisfied dependency expressed through field 'materialService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.zte.chy.App.main(App.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'materialService': Unsatisfied dependency expressed through field 'materialRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 19 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'materialRepository': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 32 more
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:162)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:133)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:125)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:109)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.onApplicationEvent(MongoPersistentEntityIndexCreator.java:51)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.data.mapping.context.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:336)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:180)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:140)
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:67)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getEntityInformation(MongoRepositoryFactory.java:119)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactory.getTargetRepository(MongoRepositoryFactory.java:93)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:266)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:252)
+	at org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean.afterPropertiesSet(MongoRepositoryFactoryBean.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 42 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:219)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:111)
+	at com.mongodb.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:66)
+	at com.mongodb.Mongo.execute(Mongo.java:781)
+	at com.mongodb.Mongo$2.execute(Mongo.java:764)
+	at com.mongodb.DBCollection.createIndex(DBCollection.java:1541)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:142)
+	... 62 more
+2017-04-15 13:48:43,234  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d: startup date [Sat Apr 15 13:48:43 CST 2017]; root of context hierarchy
+ 2017-04-15 13:48:43,501  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-15 13:48:43,797  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 13:48:44,333  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-15 13:48:45,429  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-15 13:48:45,434  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-15 13:48:45,462  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 13:48:45 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 13:48:46,865  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-15 13:48:47,006  INFO GenericScope:263 - BeanFactory id=e0dc2065-dbe1-31f2-bbca-74503d564f13
+ 2017-04-15 13:48:47,064  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 13:48:47,557  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8089 (http)
+ 2017-04-15 13:48:47,738  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2276 ms
+ 2017-04-15 13:48:47,955  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-15 13:48:47,963  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-15 13:48:47,964  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-15 13:48:47,964  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-15 13:48:47,965  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-15 13:48:48,237  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-15 13:48:48,395  INFO connection:71 - Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+ 2017-04-15 13:48:48,401  INFO cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=4338047}
+ 2017-04-15 13:48:48,512  INFO connection:71 - Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+ 2017-04-15 13:48:49,561  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.saveMaterial(com.zte.chy.model.Material) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 13:48:49,562  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialList(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.zte.chy.exception.InvalidRequestException,java.text.ParseException
+ 2017-04-15 13:48:49,563  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material/barcode],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialByBarcode(java.lang.String)
+ 2017-04-15 13:48:49,566  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog/id],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogById(java.lang.String)
+ 2017-04-15 13:48:49,567  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogByBarcode(java.lang.String)
+ 2017-04-15 13:48:49,567  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.saveControlMessageLog(com.zte.chy.model.ControlMessageLog) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 13:48:49,569  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+ 2017-04-15 13:48:49,575  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+ 2017-04-15 13:48:49,576  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+ 2017-04-15 13:48:49,577  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+ 2017-04-15 13:48:49,581  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-15 13:48:49,582  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-15 13:48:49,858  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 13:48:45 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 13:48:49,943  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 13:48:49,944  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 13:48:49,997  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 13:48:50,381  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-15 13:48:50,394  INFO AnnotationMBeanExporter:912 - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+ 2017-04-15 13:48:50,395  INFO AnnotationMBeanExporter:912 - Bean with name 'refreshScope' has been autodetected for JMX exposure
+ 2017-04-15 13:48:50,396  INFO AnnotationMBeanExporter:912 - Bean with name 'environmentManager' has been autodetected for JMX exposure
+ 2017-04-15 13:48:50,400  INFO AnnotationMBeanExporter:674 - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+ 2017-04-15 13:48:50,415  INFO AnnotationMBeanExporter:674 - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+ 2017-04-15 13:48:50,428  INFO AnnotationMBeanExporter:674 - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6179e425,type=ConfigurationPropertiesRebinder]
+ 2017-04-15 13:48:50,541  INFO DocumentationPluginsBootstrapper:84 - Context refreshed
+ 2017-04-15 13:48:50,611  INFO DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
+ 2017-04-15 13:48:50,618  INFO ApiListingReferenceScanner:44 - Scanning for api listing references
+ 2017-04-15 13:48:50,785  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8089 (http)
+ 2017-04-15 13:48:50,791  INFO App:57 - Started App in 8.19 seconds (JVM running for 8.706)
+ 2017-04-15 13:50:21,065  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+ 2017-04-15 13:50:21,090  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+ 2017-04-15 14:00:32,169  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3bb9a3ff: startup date [Sat Apr 15 14:00:32 CST 2017]; root of context hierarchy
+ 2017-04-15 14:00:32,460  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-15 14:00:32,747  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f110fcfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:00:33,242  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-15 14:00:34,334  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-15 14:00:34,337  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-15 14:00:34,363  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d6764b2: startup date [Sat Apr 15 14:00:34 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3bb9a3ff
+ 2017-04-15 14:00:35,703  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-15 14:00:35,875  INFO GenericScope:263 - BeanFactory id=dac9e8b0-8cc0-3ae5-a696-18f5d73ac4de
+ 2017-04-15 14:00:35,936  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f110fcfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:00:36,435  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8089 (http)
+ 2017-04-15 14:00:36,616  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2253 ms
+ 2017-04-15 14:00:36,829  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-15 14:00:36,836  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-15 14:00:36,837  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-15 14:00:36,837  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-15 14:00:36,839  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-15 14:00:37,099  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-15 14:00:37,172  INFO connection:71 - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+ 2017-04-15 14:00:37,174  INFO cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1028658}
+ 2017-04-15 14:00:37,328  INFO connection:71 - Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+ 2017-04-15 14:00:38,249  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material/barcode],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialByBarcode(java.lang.String)
+ 2017-04-15 14:00:38,251  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.saveMaterial(com.zte.chy.model.Material) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:00:38,252  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialList(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.zte.chy.exception.InvalidRequestException,java.text.ParseException
+ 2017-04-15 14:00:38,254  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog/id],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogById(java.lang.String)
+ 2017-04-15 14:00:38,255  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogByBarcode(java.lang.String)
+ 2017-04-15 14:00:38,255  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.saveControlMessageLog(com.zte.chy.model.ControlMessageLog) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:00:38,257  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:00:38,262  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+ 2017-04-15 14:00:38,264  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+ 2017-04-15 14:00:38,265  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+ 2017-04-15 14:00:38,272  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:00:38,273  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-15 14:00:38,509  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d6764b2: startup date [Sat Apr 15 14:00:34 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3bb9a3ff
+ 2017-04-15 14:00:38,575  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:00:38,575  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:00:38,627  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:00:38,970  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-15 14:00:38,985  INFO AnnotationMBeanExporter:912 - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+ 2017-04-15 14:00:38,986  INFO AnnotationMBeanExporter:912 - Bean with name 'refreshScope' has been autodetected for JMX exposure
+ 2017-04-15 14:00:38,987  INFO AnnotationMBeanExporter:912 - Bean with name 'environmentManager' has been autodetected for JMX exposure
+ 2017-04-15 14:00:38,990  INFO AnnotationMBeanExporter:674 - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+ 2017-04-15 14:00:39,005  INFO AnnotationMBeanExporter:674 - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+ 2017-04-15 14:00:39,018  INFO AnnotationMBeanExporter:674 - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=2d6764b2,type=ConfigurationPropertiesRebinder]
+ 2017-04-15 14:00:39,134  INFO DefaultLifecycleProcessor:341 - Starting beans in phase 2147483647
+ 2017-04-15 14:00:39,135  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+ 2017-04-15 14:00:39,170  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+ 2017-04-15 14:00:39,216  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2017-04-15 14:00:39,293  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8089 (http)
+ 2017-04-15 14:00:39,299  INFO App:57 - Started App in 7.738 seconds (JVM running for 8.16)
+ 2017-04-15 14:00:45,230  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+ 2017-04-15 14:00:45,247  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+ 2017-04-15 14:02:13,078  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d: startup date [Sat Apr 15 14:02:13 CST 2017]; root of context hierarchy
+ 2017-04-15 14:02:13,337  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-15 14:02:13,608  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:02:14,145  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-15 14:02:15,235  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-15 14:02:15,239  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-15 14:02:15,269  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 14:02:15 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 14:02:16,720  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-15 14:02:16,854  INFO GenericScope:263 - BeanFactory id=e0dc2065-dbe1-31f2-bbca-74503d564f13
+ 2017-04-15 14:02:16,909  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:02:17,405  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8089 (http)
+ 2017-04-15 14:02:17,589  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2319 ms
+ 2017-04-15 14:02:17,789  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-15 14:02:17,795  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-15 14:02:17,796  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-15 14:02:17,796  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-15 14:02:17,797  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-15 14:02:18,050  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-15 14:02:18,307  INFO connection:71 - Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+ 2017-04-15 14:02:18,309  INFO cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1043263}
+ 2017-04-15 14:02:18,424  INFO connection:71 - Opened connection [connectionId{localValue:2, serverValue:6}] to localhost:27017
+ 2017-04-15 14:02:19,362  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.saveMaterial(com.zte.chy.model.Material) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:02:19,364  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialList(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.zte.chy.exception.InvalidRequestException,java.text.ParseException
+ 2017-04-15 14:02:19,365  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material/barcode],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialByBarcode(java.lang.String)
+ 2017-04-15 14:02:19,367  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog/id],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogById(java.lang.String)
+ 2017-04-15 14:02:19,368  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogByBarcode(java.lang.String)
+ 2017-04-15 14:02:19,369  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.saveControlMessageLog(com.zte.chy.model.ControlMessageLog) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:02:19,370  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:02:19,375  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+ 2017-04-15 14:02:19,376  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+ 2017-04-15 14:02:19,378  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+ 2017-04-15 14:02:19,382  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:02:19,383  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-15 14:02:19,610  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 14:02:15 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 14:02:19,686  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:02:19,686  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:02:19,736  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:02:20,071  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-15 14:02:20,086  INFO AnnotationMBeanExporter:912 - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+ 2017-04-15 14:02:20,088  INFO AnnotationMBeanExporter:912 - Bean with name 'refreshScope' has been autodetected for JMX exposure
+ 2017-04-15 14:02:20,089  INFO AnnotationMBeanExporter:912 - Bean with name 'environmentManager' has been autodetected for JMX exposure
+ 2017-04-15 14:02:20,092  INFO AnnotationMBeanExporter:674 - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+ 2017-04-15 14:02:20,108  INFO AnnotationMBeanExporter:674 - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+ 2017-04-15 14:02:20,122  INFO AnnotationMBeanExporter:674 - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6179e425,type=ConfigurationPropertiesRebinder]
+ 2017-04-15 14:02:20,250  INFO DocumentationPluginsBootstrapper:84 - Context refreshed
+ 2017-04-15 14:02:20,289  INFO DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
+ 2017-04-15 14:02:20,301  INFO ApiListingReferenceScanner:44 - Scanning for api listing references
+ 2017-04-15 14:02:20,403  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8089 (http)
+ 2017-04-15 14:02:20,409  INFO App:57 - Started App in 7.931 seconds (JVM running for 8.373)
+ 2017-04-15 14:02:38,776  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+ 2017-04-15 14:02:38,801  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+ 2017-04-15 14:20:06,467  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d: startup date [Sat Apr 15 14:20:06 CST 2017]; root of context hierarchy
+ 2017-04-15 14:20:06,732  INFO Version:30 - HV000001: Hibernate Validator 5.2.4.Final
+ 2017-04-15 14:20:07,034  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:20:07,584  INFO ConfigServicePropertySourceLocator:80 - Fetching config from server at: http://localhost:8888
+ 2017-04-15 14:20:08,683  WARN ConfigServicePropertySourceLocator:134 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+ 2017-04-15 14:20:08,686  INFO App:661 - No active profile set, falling back to default profiles: default
+ 2017-04-15 14:20:08,714  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 14:20:08 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 14:20:10,118  WARN ConfigurationClassPostProcessor:389 - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+ 2017-04-15 14:20:10,245  INFO GenericScope:263 - BeanFactory id=e0dc2065-dbe1-31f2-bbca-74503d564f13
+ 2017-04-15 14:20:10,304  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8a6f06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2017-04-15 14:20:11,000  INFO TomcatEmbeddedServletContainer:87 - Tomcat initialized with port(s): 8089 (http)
+ 2017-04-15 14:20:11,187  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2473 ms
+ 2017-04-15 14:20:11,398  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+ 2017-04-15 14:20:11,405  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2017-04-15 14:20:11,406  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2017-04-15 14:20:11,406  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2017-04-15 14:20:11,408  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+ 2017-04-15 14:20:11,683  INFO cluster:71 - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+ 2017-04-15 14:20:11,757  INFO connection:71 - Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+ 2017-04-15 14:20:11,760  INFO cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2281521}
+ 2017-04-15 14:20:11,909  INFO connection:71 - Opened connection [connectionId{localValue:2, serverValue:8}] to localhost:27017
+ 2017-04-15 14:20:12,890  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.saveMaterial(com.zte.chy.model.Material) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:20:12,892  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialList(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.zte.chy.exception.InvalidRequestException,java.text.ParseException
+ 2017-04-15 14:20:12,893  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/material/barcode],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MaterialControl.getMaterialByBarcode(java.lang.String)
+ 2017-04-15 14:20:12,895  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog/id],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogById(java.lang.String)
+ 2017-04-15 14:20:12,896  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[GET],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.getControlMessageLogByBarcode(java.lang.String)
+ 2017-04-15 14:20:12,898  INFO RequestMappingHandlerMapping:543 - Mapped "{[/api/dal/messagelog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.zte.chy.control.MessageLogConrtol.saveControlMessageLog(com.zte.chy.model.ControlMessageLog) throws com.zte.chy.exception.InvalidRequestException
+ 2017-04-15 14:20:12,900  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:20:12,905  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+ 2017-04-15 14:20:12,907  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+ 2017-04-15 14:20:12,908  INFO RequestMappingHandlerMapping:543 - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+ 2017-04-15 14:20:12,912  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ 2017-04-15 14:20:12,913  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ 2017-04-15 14:20:13,150  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6179e425: startup date [Sat Apr 15 14:20:08 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47af7f3d
+ 2017-04-15 14:20:13,222  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:20:13,223  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:20:13,270  INFO SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ 2017-04-15 14:20:13,590  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-15 14:20:13,604  INFO AnnotationMBeanExporter:912 - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+ 2017-04-15 14:20:13,605  INFO AnnotationMBeanExporter:912 - Bean with name 'refreshScope' has been autodetected for JMX exposure
+ 2017-04-15 14:20:13,607  INFO AnnotationMBeanExporter:912 - Bean with name 'environmentManager' has been autodetected for JMX exposure
+ 2017-04-15 14:20:13,610  INFO AnnotationMBeanExporter:674 - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+ 2017-04-15 14:20:13,627  INFO AnnotationMBeanExporter:674 - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+ 2017-04-15 14:20:13,640  INFO AnnotationMBeanExporter:674 - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6179e425,type=ConfigurationPropertiesRebinder]
+ 2017-04-15 14:20:13,773  INFO DocumentationPluginsBootstrapper:84 - Context refreshed
+ 2017-04-15 14:20:13,804  INFO DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
+ 2017-04-15 14:20:13,817  INFO ApiListingReferenceScanner:44 - Scanning for api listing references
+ 2017-04-15 14:20:14,042  INFO TomcatEmbeddedServletContainer:185 - Tomcat started on port(s): 8089 (http)
+ 2017-04-15 14:20:14,048  INFO App:57 - Started App in 8.223 seconds (JVM running for 8.645)
+ 2017-04-15 14:20:18,378  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+ 2017-04-15 14:20:18,411  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+ 
