@@ -1,0 +1,19 @@
+2017-04-08 14:45:00,290  INFO SampleActiveMQApplication:48 - Starting SampleActiveMQApplication on 0M4N203YXTY2XHI with PID 1420 (D:\JavaWorkspace\spring-boot-sample-activemq\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-activemq)
+ 2017-04-08 14:45:00,293  INFO SampleActiveMQApplication:661 - No active profile set, falling back to default profiles: default
+ 2017-04-08 14:45:00,415  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@528931cf: startup date [Sat Apr 08 14:45:00 CST 2017]; root of context hierarchy
+ 2017-04-08 14:45:01,689  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-08 14:45:01,696  INFO DefaultLifecycleProcessor:341 - Starting beans in phase 2147483647
+ 2017-04-08 14:45:02,126  INFO SampleActiveMQApplication:57 - Started SampleActiveMQApplication in 2.098 seconds (JVM running for 2.51)
+ 2017-04-08 14:49:16,419  INFO SampleActiveMQApplication:48 - Starting SampleActiveMQApplication on 0M4N203YXTY2XHI with PID 5836 (D:\JavaWorkspace\spring-boot-sample-activemq\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-activemq)
+ 2017-04-08 14:49:16,423  INFO SampleActiveMQApplication:661 - No active profile set, falling back to default profiles: default
+ 2017-04-08 14:49:16,543  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4218d6a3: startup date [Sat Apr 08 14:49:16 CST 2017]; root of context hierarchy
+ 2017-04-08 14:49:18,354  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-08 14:49:18,359  INFO DefaultLifecycleProcessor:341 - Starting beans in phase 2147483647
+ 2017-04-08 14:49:18,771  INFO SampleActiveMQApplication:57 - Started SampleActiveMQApplication in 2.68 seconds (JVM running for 3.56)
+ 2017-04-08 14:51:32,360  INFO SampleActiveMQApplication:48 - Starting SampleActiveMQApplication on 0M4N203YXTY2XHI with PID 3552 (D:\JavaWorkspace\spring-boot-sample-activemq\target\classes started by Administrator in D:\JavaWorkspace\spring-boot-sample-activemq)
+ 2017-04-08 14:51:32,363  INFO SampleActiveMQApplication:661 - No active profile set, falling back to default profiles: default
+ 2017-04-08 14:51:32,444  INFO AnnotationConfigApplicationContext:582 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@528931cf: startup date [Sat Apr 08 14:51:32 CST 2017]; root of context hierarchy
+ 2017-04-08 14:51:33,780  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+ 2017-04-08 14:51:33,784  INFO DefaultLifecycleProcessor:341 - Starting beans in phase 2147483647
+ 2017-04-08 14:51:34,162  INFO SampleActiveMQApplication:57 - Started SampleActiveMQApplication in 2.092 seconds (JVM running for 2.476)
+ 
