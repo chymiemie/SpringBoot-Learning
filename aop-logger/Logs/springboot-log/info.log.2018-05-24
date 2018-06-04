@@ -1,0 +1,591 @@
+2018-05-24-23-22 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-22 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-22 [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO] - Could not detect default configuration classes for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: DemoSpringbootAopLogApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-05-24-23-22 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Found @SpringBootConfiguration com.iflytek.chy.App for test class com.iflytek.chy.DemoSpringbootAopLogApplicationTests
+2018-05-24-23-22 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-22 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1725dc0f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3911c2a7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ac3c60d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4facf68f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@76508ed1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@41e36e46, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@15c43bd9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d74bf60, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f209819, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@15eb5ee5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2145b572, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39529185]
+2018-05-24-23-22 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.9.Final
+2018-05-24-23-22 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 10536 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-22 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-22 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2beee7ff: startup date [Thu May 24 23:22:49 CST 2018]; root of context hierarchy
+2018-05-24-23-22 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+2018-05-24-23-22 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:238)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:226)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:197)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:176)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	... 39 more
+2018-05-24-23-22 [main] [org.springframework.test.context.TestContextManager] [ERROR] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1725dc0f] to prepare test instance [com.iflytek.chy.DemoSpringbootAopLogApplicationTests@1440c311]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:238)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:226)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:197)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:176)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	... 39 more
+2018-05-24-23-26 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-26 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-26 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-26 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54c562f7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@318ba8c8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6dbb137d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c9d0b9d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@43301423, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2f112965, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a04f701, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e91d63f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d4342c2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bbf180e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@163e4e87, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@56de5251]
+2018-05-24-23-26 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 6.0.9.Final
+2018-05-24-23-26 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 6444 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-26 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-26 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@757277dc: startup date [Thu May 24 23:26:29 CST 2018]; root of context hierarchy
+2018-05-24-23-26 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+2018-05-24-23-26 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:238)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:226)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:197)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:176)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	... 39 more
+2018-05-24-23-26 [main] [org.springframework.test.context.TestContextManager] [ERROR] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@54c562f7] to prepare test instance [com.iflytek.chy.DemoSpringbootAopLogApplicationTests@4aac85fa]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:238)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:226)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:197)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:176)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	... 39 more
+2018-05-24-23-34 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-34 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-34 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-34 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5faeada1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@528931cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ea1a8d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1563da5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bbf4b8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@30a3107a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33c7e1bb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34c4973, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52feb982, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7a765367, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b0bfab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17d677df]
+2018-05-24-23-34 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 5576 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-34 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-34 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:34:15 CST 2018]; root of context hierarchy
+2018-05-24-23-34 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-24-23-34 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+2018-05-24-23-34 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 39 more
+2018-05-24-23-34 [main] [org.springframework.test.context.TestContextManager] [ERROR] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5faeada1] to prepare test instance [com.iflytek.chy.DemoSpringbootAopLogApplicationTests@4a951911]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: net$xqlee$project$aop$annotation$ServiceLog
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 39 more
+2018-05-24-23-42 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-42 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-42 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-42 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5faeada1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@528931cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ea1a8d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1563da5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bbf4b8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@30a3107a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33c7e1bb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34c4973, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52feb982, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7a765367, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b0bfab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17d677df]
+2018-05-24-23-42 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 11032 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-42 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-42 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:42:16 CST 2018]; root of context hierarchy
+2018-05-24-23-42 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-24-23-42 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:42:16 CST 2018]; root of context hierarchy
+2018-05-24-23-42 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-24-23-42 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-24-23-42 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-42 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-42 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-05-24-23-42 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-42 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Started DemoSpringbootAopLogApplicationTests in 6.091 seconds (JVM running for 7.094)
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[异常操作测试],类:com.iflytek.chy.service.TestServiceImp,方法名：doError,参数:leftso.com&
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常方法:com.iflytek.chy.service.TestServiceImp.doError();参数:leftso.com&,处理了:异常操作测试
+2018-05-24-23-42 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常信息:/ by zero
+2018-05-24-23-42 [Thread-3] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Closing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:42:16 CST 2018]; root of context hierarchy
+2018-05-24-23-45 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-45 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-45 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-45 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5faeada1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@528931cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ea1a8d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1563da5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bbf4b8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@30a3107a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33c7e1bb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34c4973, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52feb982, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7a765367, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b0bfab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17d677df]
+2018-05-24-23-45 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 10276 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-45 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-45 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:45:45 CST 2018]; root of context hierarchy
+2018-05-24-23-45 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-24-23-45 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:45:45 CST 2018]; root of context hierarchy
+2018-05-24-23-45 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-24-23-45 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-24-23-45 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-45 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-45 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-45 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-05-24-23-45 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Started DemoSpringbootAopLogApplicationTests in 5.482 seconds (JVM running for 6.42)
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[异常操作测试],类:com.iflytek.chy.service.TestServiceImp,方法名：doError,参数:leftso.com&
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-45 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[异常操作测试],类:com.iflytek.chy.service.TestServiceImp,方法名：doError,参数:leftso.com&
+2018-05-24-23-45 [Thread-3] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Closing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:45:45 CST 2018]; root of context hierarchy
+2018-05-24-23-56 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-56 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-56 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-56 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5faeada1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@528931cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ea1a8d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1563da5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bbf4b8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@30a3107a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33c7e1bb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34c4973, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52feb982, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7a765367, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b0bfab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17d677df]
+2018-05-24-23-56 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 6660 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-56 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-56 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:56:37 CST 2018]; root of context hierarchy
+2018-05-24-23-56 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-24-23-56 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:56:37 CST 2018]; root of context hierarchy
+2018-05-24-23-56 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-24-23-56 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-24-23-56 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-56 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-56 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-56 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Started DemoSpringbootAopLogApplicationTests in 5.85 seconds (JVM running for 6.865)
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[异常操作测试],类:com.iflytek.chy.service.TestServiceImp,方法名：doError,参数:leftso.com&
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常方法:com.iflytek.chy.service.TestServiceImp.doError();参数:leftso.com&,处理了:异常操作测试
+2018-05-24-23-56 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常信息:/ by zero
+2018-05-24-23-56 [Thread-3] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Closing org.springframework.web.context.support.GenericWebApplicationContext@131774fe: startup date [Thu May 24 23:56:37 CST 2018]; root of context hierarchy
+2018-05-24-23-57 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests], using SpringBootContextLoader
+2018-05-24-23-57 [main] [org.springframework.test.context.support.AbstractContextLoader] [INFO] - Could not detect default resource locations for test class [com.iflytek.chy.DemoSpringbootAopLogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-24-23-57 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-24-23-57 [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3043fe0e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78e67e0a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@bd8db5a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f943d71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@80503, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b553d26, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69a3d1d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@86be70a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@480bdb19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a556333, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7d70d1b1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a742aa2]
+2018-05-24-23-57 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Starting DemoSpringbootAopLogApplicationTests on DESKTOP-IIAKF39 with PID 3008 (started by chyoung in D:\JavaWorkspace\aop-logger)
+2018-05-24-23-57 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - No active profile set, falling back to default profiles: default
+2018-05-24-23-57 [main] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6069db50: startup date [Thu May 24 23:57:59 CST 2018]; root of context hierarchy
+2018-05-24-23-58 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-24-23-58 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6069db50: startup date [Thu May 24 23:57:59 CST 2018]; root of context hierarchy
+2018-05-24-23-58 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-24-23-58 [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-24-23-58 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-58 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-58 [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24-23-58 [main] [org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping] [INFO] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24-23-58 [main] [com.iflytek.chy.DemoSpringbootAopLogApplicationTests] [INFO] - Started DemoSpringbootAopLogApplicationTests in 8.221 seconds (JVM running for 9.224)
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[新增用户信息测试操作。。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：insert,参数:{key1=v1, key2=v2}&000&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[更新用户信息操作....],类:com.iflytek.chy.service.TestServiceImp,方法名：update,参数:name&id&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[删除操作。。。。],类:com.iflytek.chy.service.TestServiceImp,方法名：delete,参数:leftso&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================开始执行前置通知==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - [X用户]执行了[异常操作测试],类:com.iflytek.chy.service.TestServiceImp,方法名：doError,参数:leftso.com&
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - =====================执行前置通知结束==================
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常方法:com.iflytek.chy.service.TestServiceImp.doError();参数:leftso.com&,处理了:异常操作测试
+2018-05-24-23-58 [main] [com.iflytek.chy.aop.aspect.LogAspect] [INFO] - 异常信息:/ by zero
+2018-05-24-23-58 [Thread-3] [org.springframework.web.context.support.GenericWebApplicationContext] [INFO] - Closing org.springframework.web.context.support.GenericWebApplicationContext@6069db50: startup date [Thu May 24 23:57:59 CST 2018]; root of context hierarchy
